@@ -1,0 +1,13 @@
+{
+  "name": "femi",
+  "version": "0.0.6",
+  "author": "raleighy <raleighy@163.com>",
+  "bin": {
+    "femi": "./bin/femi.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^4.1.0",
+    "shelljs": "^0.8.3"
+  }
+}

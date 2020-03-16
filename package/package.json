@@ -1,0 +1,44 @@
+{
+  "name": "femi",
+  "version": "0.0.2",
+  "repository": "",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "femi-scripts start",
+    "build": "femi-scripts build",
+    "fetch": "femi-fetch get scn",
+    "eslint": "eslint src --ext .ts,tsx,.js,.jsx",
+    "eslint:fix": "eslint src --ext .ts,tsx,.js,.jsx --fix",
+    "docker:build": "docker build ./ -f ./docker/Dockerfile -t femi",
+    "docker:run": "docker run -d -p 8088:80 femi"
+  },
+  "entry": {
+    "Main": "src/single-spa.config.js",
+    "Home": "src/apps/app-Home/index.tsx"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,scss,md,ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "yarn eslint"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "femi-scripts": "^0.1.4",
+    "mobx": "^5.13.0",
+    "mobx-react": "^6.1.3",
+    "react-async": "^8.0.0",
+    "react-async-devtools": "^8.0.0"
+  },
+  "devDependencies": {}
+}

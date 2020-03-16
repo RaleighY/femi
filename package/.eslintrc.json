@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "process": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "extends": [
+    "eslint:recommended", // eslint rules
+    "plugin:@typescript-eslint/eslint-recommended", // 解决eslint和typescript-eslint之间的冲突
+    "plugin:@typescript-eslint/recommended", // eslint(typescript版)rules
+    "prettier" // 必须放在最后，以便prettier的配置能覆盖前面的规则
+  ],
+  "rules": {
+    "react/jsx-uses-react": "error", // 防止错误的显示未使用react
+    "react/jsx-uses-vars": "error", // 防止错误的显示未使用变量
+    "@typescript-eslint/explicit-function-return-type": 0, // 禁用必须显式的函数返回类型
+    "@typescript-eslint/ban-ts-ignore": 0, // 允许使用@ts-ignore
+    "@typescript-eslint/member-delimiter-style": 0,
+    "@typescript-eslint/interface-name-prefix": [2, "always"],
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/no-empty-function": 1,
+    "prettier/prettier": 1, // prettier的覆盖规则全部当做error级别
+    "no-control-regex": 1
+  }
+}
