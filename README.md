@@ -130,6 +130,23 @@ femi create-app react Intro
 
 <Font color="#d03">目前暂时只支持 React 类型的 App，后续会添加 Vue</Font>
 
+### 配置开发环境代理
+
+package.json
+
+```json
+{
+  ...,
+  "proxy": {
+    "/api": {
+      "target": "http://xxxxx.com/",
+      "changeOrigin": true
+    }
+  },
+  ...
+}
+```
+
 ### Commitlint
 
 规范
@@ -179,4 +196,89 @@ git commit -m 'fix(scale): fix something.'
 
 ### Docker
 
-大名鼎鼎的 docker 带来的好处自然无需赘述，以 docker 封装，前端可以作为一个服务进行发布，并且隔离外部运行环境。特别在做版本回滚时非常方便，只需要以安全的镜像起一个容器，保住研发的最后一条生命线。
+大名鼎鼎的 docker 带来的好处自然无需赘述，以 docker 封装，前端可以作为一个服务进行发布，并且隔离外部运行环境。在做版本回滚时非常方便，只需要以安全的镜像起一个容器，保住研发的最后一条生命线。配合容器的概念，通过控制流量导向，可以实现灰度发布。
+
+#### 安装 docker
+
+mac
+
+```
+brew install docker
+```
+
+hello world
+
+```
+docker run hello-world
+```
+
+搜索镜像
+
+```
+docker search nginx
+```
+
+下载镜像
+
+```
+docker pull nginx
+```
+
+展示所有的镜像
+
+```
+docker images
+```
+
+通过 dockerfile 构建镜像
+
+- -t 指定镜像名
+- -f 指定 dockerfile 路径
+
+```
+docker build ./ -f ./path/to/dockerfile -t yourImageName
+```
+
+使用镜像  运行容器
+
+```
+docker run -p 80:80 -it ImageName /bin/sh
+```
+
+连接到正在运行的容器
+
+```
+docker attach --sig-proxy=false ContainerNameOrId
+```
+
+```
+docker exec -it ContainerNameOrId /bin/bash
+```
+
+Dockerfile 详解
+
+FROM: 指定基础镜像
+
+```
+FROM <image>
+FROM <image>:<tag>
+FROM <image>:<digest>
+```
+
+RUN: 运行指定的命令
+
+```
+RUN <command>
+```
+
+COPY: 复制命令
+
+```
+COPY <src>... <dest>
+```
+
+\*src 为本地文件
+
+[docker 命令大全](http://www.runoob.com/docker/docker-command-manual.html)
+
+[dockerfile 命令大全](https://www.cnblogs.com/dazhoushuoceshi/p/7066041.html)
