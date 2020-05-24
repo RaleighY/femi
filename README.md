@@ -85,10 +85,8 @@ yarn build report
 
 ```
   -
-  |--- config   // webpack配置，后续会删除，以npm方式引入
   |--- docker   // docker配置
-  |--- public   // 存放静态资源，此目录下的文件构件时仅复制
-  |--- scripts  // npm scripts，后续会删除，以npm方式引入
+  |--- public   // 存放静态资源，此目录下的文件构建时仅复制
   |--- src
     |--- apps   // app目录
       |--- app1
