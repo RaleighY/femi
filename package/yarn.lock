@@ -2506,9 +2506,10 @@ faye-websocket@~0.11.1:
   dependencies:
     websocket-driver ">=0.5.1"
 
-femi-scripts@^0.1.4:
-  version "0.1.4"
-  resolved "http://r.cnpmjs.org/femi-scripts/download/femi-scripts-0.1.4.tgz#37d8ac1a6ab0b29fd70fa0fce319e4e7153274a5"
+femi-scripts@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.npm.taobao.org/femi-scripts/download/femi-scripts-0.1.5.tgz#5ceb746342dcd1758aa93be368e7ffc048e1a0e1"
+  integrity sha1-XOt0Y0Lc0XWKqTvjaOf/wEjhoOE=
   dependencies:
     "@commitlint/cli" "^8.1.0"
     "@commitlint/config-conventional" "^8.1.0"
