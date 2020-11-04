@@ -8,14 +8,14 @@ module.exports = function init(projectName) {
 
   copyDirSync(
     path.resolve(__dirname, "../package/main"),
-    resolveApp(""),
-    (statsname, from, a3, a4, a5) => {
-      if (from.match("node_modules")) {
-        return false
-      } else {
-        return true
-      }
-    }
+    resolveApp("")
+    // (statsname, from) => {
+    //   if (from.match("node_modules")) {
+    //     return false
+    //   } else {
+    //     return true
+    //   }
+    // }
   )
 
   const gitignoreExists = fs.existsSync(resolveApp(".gitignore"))
