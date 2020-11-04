@@ -3,9 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <title>Femi</title>
+    <link rel="shortcut icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="/system.js"></script>
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "react": "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js",
+          "react-dom": "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js",
+          "App": "/App.js",
+          "Component": "/Component.js"
+        }
+      }
+    </script>
   </head>
   <body>
-    <div id="appHome"></div>
+    <div id="app-home"></div>
+    <div id="app-parcel"></div>
+    <div id="app-vue"></div>
   </body>
 </html>

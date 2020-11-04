@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react"
 
+import history from "@Home/src/common/history"
+import { PAGE } from "@Home/src/constants/paths"
 import Loading from "@components/Loading"
+
 import { Container, Intro } from "./home.style"
 
 export default function() {
@@ -8,8 +11,12 @@ export default function() {
   useEffect(() => {
     setTimeout(() => {
       setLoadingShow(false)
-    }, 3000)
+    }, 1000)
   })
+
+  const handleGoToPage = () => {
+    history.push(PAGE)
+  }
 
   return (
     <Container>
@@ -21,7 +28,9 @@ export default function() {
         </p>
       </Intro>
       <div>
-        <Loading loading={loadingShow}></Loading>
+        <Loading loading={loadingShow}>
+          <button onClick={handleGoToPage}>Go To Page</button>
+        </Loading>
       </div>
     </Container>
   )

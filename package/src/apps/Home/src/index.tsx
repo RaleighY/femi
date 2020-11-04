@@ -2,9 +2,10 @@ import React from "react"
 import { Router, Route, Switch } from "react-router-dom"
 import { Helmet } from "react-helmet"
 
+import Page from "./routes/Page"
 import Home from "./routes/Home"
 import history from "./common/history"
-import { HOME } from "./constants/paths"
+import { HOME, PAGE } from "./constants/paths"
 
 import GlobalStyles from "@styles/index"
 
@@ -19,7 +20,8 @@ export default () => {
 
       <Router history={history}>
         <Switch>
-          <Route path={HOME} component={Home} exact />
+          <Route path={PAGE} component={Page} />
+          <Route path={HOME} component={Home} />
         </Switch>
       </Router>
     </>

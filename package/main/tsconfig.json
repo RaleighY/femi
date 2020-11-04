@@ -1,0 +1,36 @@
+{
+  "exclude": ["node_modules", "public", "dist"],
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "build",
+    "baseUrl": ".",
+    "jsx": "react",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@src/*": ["src/*"],
+      "@apps/*": ["src/apps/*"],
+      "@parcels/*": ["src/parcels/*"],
+      "@common/*": ["src/common/*"],
+      "@constants/*": ["src/constants/*"],
+      "@components/*": ["src/components/*"],
+      "@styles/*": ["src/styles/*"],
+      "@type/*": ["src/type/*"],
+      "@appReact/*": ["src/apps/appReact/*"],
+      "@appVue/*": ["src/apps/appVue/*"]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Femi</title>
+    <link rel="shortcut icon" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "vue": "https://cdn.jsdelivr.net/npm/vue",
+          "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.4.8/dist/vue-router.min.js",
+          "react": "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js",
+          "react-dom": "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js",
+          "vueApp2": "/vueApp.js",
+          "reactApp2": "/reactApp2.js",
+          "vueApp": "http://localhost:3002/Parcel/js/main.js",
+          "reactApp": "http://localhost:3001/Parcel/js/main.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app-react"></div>
+    <div id="app-vue"></div>
+    <div id="app-parcel-react"></div>
+  </body>
+</html>

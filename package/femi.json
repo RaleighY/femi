@@ -1,0 +1,7 @@
+{
+  "entry": {
+    "Main": "src/single-spa.config.js",
+    "Home": "src/apps/Home/index.tsx",
+    "Vue": "src/apps/appVue/index.js"
+  }
+}

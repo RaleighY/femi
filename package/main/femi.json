@@ -1,0 +1,8 @@
+{
+  "entry": {
+    "Main": "src/single-spa.config.js",
+    "React": "src/apps/appReact/index.tsx",
+    "Vue": "src/apps/appVue/index.js"
+  },
+  "port": 3000
+}

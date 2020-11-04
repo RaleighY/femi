@@ -1,5 +1,4 @@
 import { registerApplication, start } from "single-spa"
-
 import apps from "./app"
 
 const pathPrefix = (prefix, exact) => location =>
@@ -15,6 +14,8 @@ apps.forEach(appConfig => {
     appConfig
   )
 })
+
+// registerApplication("Parcel", () => import("./src/apps/Parcel/app"), pathPrefix("/Parcel"))
 
 window.addEventListener("single-spa:app-change", evt => {})
 

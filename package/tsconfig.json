@@ -23,12 +23,14 @@
     "paths": {
       "@src/*": ["src/*"],
       "@apps/*": ["src/apps/*"],
+      "@parcels/*": ["src/p/*"],
       "@common/*": ["src/common/*"],
       "@constants/*": ["src/constants/*"],
       "@components/*": ["src/components/*"],
       "@stores/*": ["src/stores/*"],
       "@styles/*": ["src/styles/*"],
-      "@type/*": ["src/type/*"]
+      "@type/*": ["src/type/*"],
+      "@Home/*": ["src/apps/Home/*"]
     }
   }
 }
