@@ -8,7 +8,7 @@ const packageJson = require("../package.json")
 const copyDirSync = require("../lib/copy").copyDirSync
 
 const appDirectory = fs.realpathSync(process.cwd())
-const resolveApp = relativePath => path.resolve(appDirectory, relativePath)
+const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath)
 
 const program = new commander.Command()
 program.version(packageJson.version)
@@ -17,8 +17,8 @@ program.version(packageJson.version)
 program
   .command("init <projectName>")
   .description("create a mirco project")
-  .action(projectName => {
-    copyDirSync(path.resolve(__dirname, "../package"), resolveApp(`${projectName}`))
+  .action((projectName) => {
+    copyDirSync(path.resolve(__dirname, "../package/main"), resolveApp(`${projectName}`))
   })
 
 // create an mirco app
@@ -43,7 +43,7 @@ program
           }
         })
       }).then(
-        stats => {
+        (stats) => {
           if (stats && stats.isDirectory()) {
             if (fs.existsSync(path.resolve(ownPath, "app.tsx"))) {
               // Judge whether there are app.tsx for joining to the project
@@ -56,7 +56,7 @@ program
             console.log(ownPath + " is not a directory.")
           }
         },
-        e => {
+        (e) => {
           copyDirSync(templatePath, targetPath)
           updateTsconfig(tsconfigPath, name)
         }

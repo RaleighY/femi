@@ -1,8 +1,8 @@
 import { createBrowserHistory } from "history"
-import { APP_HOME } from "@constants/appPath"
+import { APP_REACT } from "@constants/appPath"
 
 const history = createBrowserHistory({
-  basename: APP_HOME,
+  basename: APP_REACT,
 })
 
 history.listen(location => {

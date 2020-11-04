@@ -1,6 +1,6 @@
 {
   "name": "femi",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "author": "raleighy <raleighy@163.com>",
   "bin": {
     "femi": "./bin/femi.js"
