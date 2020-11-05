@@ -748,7 +748,7 @@ ajv-keywords@^3.1.0, ajv-keywords@^3.4.1, ajv-keywords@^3.5.2:
 
 ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.4, ajv@^6.12.5:
   version "6.12.6"
-  resolved "https://registry.npm.taobao.org/ajv/download/ajv-6.12.6.tgz?cache=0&sync_timestamp=1603561486770&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fajv%2Fdownload%2Fajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
+  resolved "https://registry.npm.taobao.org/ajv/download/ajv-6.12.6.tgz?cache=0&sync_timestamp=1604564369215&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fajv%2Fdownload%2Fajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
   integrity sha1-uvWmLoArB9l3A0WG+MO69a3ybfQ=
   dependencies:
     fast-deep-equal "^3.1.1"
@@ -1437,9 +1437,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001154:
-  version "1.0.30001154"
-  resolved "https://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30001154.tgz#f3bbc245ce55e4c1cd20fa731b097880181a7f17"
-  integrity sha1-87vCRc5V5MHNIPpzGwl4gBgafxc=
+  version "1.0.30001156"
+  resolved "https://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30001156.tgz?cache=0&sync_timestamp=1604556310871&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcaniuse-lite%2Fdownload%2Fcaniuse-lite-1.0.30001156.tgz#75c20937b6012fe2b02ab58b30d475bf0718de97"
+  integrity sha1-dcIJN7YBL+KwKrWLMNR1vwcY3pc=
 
 chalk@2.4.2, chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.3.0, chalk@^2.4.1, chalk@^2.4.2:
   version "2.4.2"
@@ -2988,10 +2988,10 @@ faye-websocket@~0.11.1:
   dependencies:
     websocket-driver ">=0.5.1"
 
-femi-scripts@^0.1.32:
-  version "0.1.32"
-  resolved "https://registry.npm.taobao.org/femi-scripts/download/femi-scripts-0.1.32.tgz#2ab2be0848e5d960fe238ed4ad2c460720a3289e"
-  integrity sha1-KrK+CEjl2WD+I47UrSxGByCjKJ4=
+femi-scripts@^0.1.33:
+  version "0.1.33"
+  resolved "https://registry.npm.taobao.org/femi-scripts/download/femi-scripts-0.1.33.tgz?cache=0&sync_timestamp=1604564333632&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffemi-scripts%2Fdownload%2Ffemi-scripts-0.1.33.tgz#40536f0f3a3e163ef7b9a280831fb9bee952ea02"
+  integrity sha1-QFNvDzo+Fj73uaKAgx+5vulS6gI=
   dependencies:
     "@commitlint/cli" "^8.1.0"
     "@commitlint/config-conventional" "^8.1.0"
@@ -4266,9 +4266,9 @@ is-text-path@^1.0.1:
     text-extensions "^1.0.0"
 
 is-what@^3.3.1:
-  version "3.11.2"
-  resolved "https://registry.npm.taobao.org/is-what/download/is-what-3.11.2.tgz#4ca0c91b236acea48dd6af0a072d6a84aec7a1d4"
-  integrity sha1-TKDJGyNqzqSN1q8KBy1qhK7HodQ=
+  version "3.11.3"
+  resolved "https://registry.npm.taobao.org/is-what/download/is-what-3.11.3.tgz?cache=0&sync_timestamp=1604561863632&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fis-what%2Fdownload%2Fis-what-3.11.3.tgz#5e98513a3199da2a1f477f3afdb2f40e8365a141"
+  integrity sha1-XphROjGZ2iofR386/bL0DoNloUE=
 
 is-windows@^1.0.1, is-windows@^1.0.2:
   version "1.0.2"
@@ -8132,7 +8132,7 @@ webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-
 
 webpack@^4.37.0:
   version "4.44.2"
-  resolved "https://registry.npm.taobao.org/webpack/download/webpack-4.44.2.tgz?cache=0&sync_timestamp=1603999456895&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwebpack%2Fdownload%2Fwebpack-4.44.2.tgz#6bfe2b0af055c8b2d1e90ed2cd9363f841266b72"
+  resolved "https://registry.npm.taobao.org/webpack/download/webpack-4.44.2.tgz?cache=0&sync_timestamp=1604553144283&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwebpack%2Fdownload%2Fwebpack-4.44.2.tgz#6bfe2b0af055c8b2d1e90ed2cd9363f841266b72"
   integrity sha1-a/4rCvBVyLLR6Q7SzZNj+EEma3I=
   dependencies:
     "@webassemblyjs/ast" "1.9.0"

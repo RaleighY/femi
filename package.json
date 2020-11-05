@@ -1,9 +1,12 @@
 {
   "name": "femi",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "raleighy <raleighy@163.com>",
   "bin": {
     "femi": "./bin/femi.js"
+  },
+  "scripts": {
+    "pub": "node scripts/publish.js && yarn publish"
   },
   "license": "MIT",
   "dependencies": {

@@ -1,0 +1,7 @@
+{
+  "entry": {
+    "Main": "./src/index.tsx",
+    "Parcel": "./src/parcel.tsx"
+  },
+  "port": 3001
+}

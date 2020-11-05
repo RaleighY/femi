@@ -1,0 +1,8 @@
+{
+  "entry": {
+    "Main": "./src/index.js",
+    "Parcel": "./src/parcel.js"
+  },
+  "useTs": false,
+  "port": 3002
+}
