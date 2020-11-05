@@ -12,13 +12,7 @@ module.exports = function create(type, name) {
 
   if (type === "react") {
     const templatePath = path.resolve(__dirname, "../package/templates/react-runtime")
-    copyDirSync(templatePath, resolveApp(name), (statsname, from) => {
-      if (from.match("node_modules") && from.match("femi")) {
-        return false
-      } else {
-        return true
-      }
-    })
+    copyDirSync(templatePath, resolveApp(name))
   }
 
   // new Promise((resolve, reject) => {
