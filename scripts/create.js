@@ -2,6 +2,7 @@ const fs = require("fs")
 const path = require("path")
 const shell = require("shelljs")
 const copyDirSync = require("../lib/copy").copyDirSync
+const updateIgnored = require("../lib/updateIgnored")
 
 module.exports = function create(type, name) {
   const appDirectory = fs.realpathSync(process.cwd())
@@ -12,8 +13,15 @@ module.exports = function create(type, name) {
 
   if (type === "react") {
     const templatePath = path.resolve(__dirname, "../package/templates/react-runtime")
-    copyDirSync(templatePath, resolveApp(name))
+    copyDirSync(templatePath, resolveApp(name), (statsname, from) => {
+      if (from.match("node_modules")) {
+        return false
+      } else {
+        return true
+      }
+    })
   }
+  updateIgnored(name)
 
   // new Promise((resolve, reject) => {
   //   fs.stat(ownPath, (err, stats) => {

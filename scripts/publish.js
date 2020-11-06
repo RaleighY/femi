@@ -34,6 +34,9 @@ const updateArr = [
 updateArr.forEach((item) => {
   const fileExists = fs.existsSync(item.from)
   if (fileExists) {
+    if (fs.existsSync(item.to)) {
+      fs.removeSync(item.to)
+    }
     ;(item.replace ? fs.moveSync : fs.copyFileSync)(item.from, item.to)
   }
 })
