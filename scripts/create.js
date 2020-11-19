@@ -13,13 +13,30 @@ module.exports = function create(type, name) {
 
   if (type === "react") {
     const templatePath = path.resolve(__dirname, "../package/templates/react-runtime")
-    copyDirSync(templatePath, resolveApp(name), (statsname, from) => {
-      if (from.match("node_modules")) {
-        return false
-      } else {
-        return true
-      }
-    })
+    copyDirSync(
+      templatePath,
+      resolveApp(name)
+      // (statsname, from) => {
+      //   if (from.match("node_modules")) {
+      //     return false
+      //   } else {
+      //     return true
+      //   }
+      // }
+    )
+  } else if (type === "vue") {
+    const templatePath = path.resolve(__dirname, "../package/templates/vue-runtime")
+    copyDirSync(
+      templatePath,
+      resolveApp(name)
+      // (statsname, from) => {
+      //   if (from.match("node_modules")) {
+      //     return false
+      //   } else {
+      //     return true
+      //   }
+      // }
+    )
   }
   updateIgnored(name)
 

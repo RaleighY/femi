@@ -21,7 +21,9 @@ program
   .command("create-app <type> <name>")
   .description("create a mirco app")
   .action((type, name) => {
-    create(type, name)
+    if (type === "react" || type === "vue") {
+      create(type, name)
+    }
   })
 
 program.parse(process.argv)

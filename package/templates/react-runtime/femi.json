@@ -1,6 +1,6 @@
 {
   "entry": {
-    "Main": "./src/index.tsx",
+    "Main": "./src/dev.tsx",
     "Parcel": "./src/parcel.tsx"
   },
   "port": 3001

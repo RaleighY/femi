@@ -22,10 +22,12 @@
     "esModuleInterop": true,
     "paths": {
       "@src/*": ["src/*"],
+      "@api/*": ["src/api/*"],
       "@apps/*": ["src/apps/*"],
       "@common/*": ["src/common/*"],
       "@constants/*": ["src/constants/*"],
       "@components/*": ["src/components/*"],
+      "@routes/*": ["src/routes/*"],
       "@stores/*": ["src/stores/*"],
       "@styles/*": ["src/styles/*"],
       "@type/*": ["src/type/*"]
