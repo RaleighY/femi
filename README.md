@@ -22,7 +22,7 @@
 
 ## 快速上手
 
-### 安装 Femi
+#### 安装 Femi
 
 ```
 npm install femi -g
@@ -34,19 +34,19 @@ or
 yarn global add femi
 ```
 
-### 初始化主工程
+#### 初始化主工程
 
 ```
 femi init myFemiProject
 ```
 
-### 进入目录，安装依赖
+#### 进入目录，安装依赖
 
 ```
 cd myFemiProject && yarn
 ```
 
-### 启动主工程开发环境
+#### 启动主工程开发环境
 
 ```
 yarn start
@@ -181,14 +181,14 @@ yarn build
 ```
 // Parcel 为入口名称，子应用默认已经配好
 // devServer输出静态资源: localhost: [端口号]/Parcel/js/main.js
-yarn build Parcel --dev
+yarn build Parcel --system
 ```
 
 ### 子应用以 system.js 格式输出
 
 ```
 // 生成 dist 目录
-yarn build Parcel --dev
+yarn build Parcel --system
 ```
 
 ### 主工程接入子应用
