@@ -19,8 +19,4 @@ export default [
     path: APP_PARCEL_REACT,
     domId: "app-parcel-react",
   },
-].map(item => {
-  item.domElement = document.getElementById(item.domId)
-  item.domElementGetter = () => document.getElementById(item.domId)
-  return item
-})
+]
