@@ -24,8 +24,21 @@ module.exports = function create(type, name) {
       //   }
       // }
     )
-  } else if (type === "vue") {
-    const templatePath = path.resolve(__dirname, "../package/templates/vue-runtime")
+  } else if (type === "vue2") {
+    const templatePath = path.resolve(__dirname, "../package/templates/vue2-runtime")
+    copyDirSync(
+      templatePath,
+      resolveApp(name)
+      // (statsname, from) => {
+      //   if (from.match("node_modules")) {
+      //     return false
+      //   } else {
+      //     return true
+      //   }
+      // }
+    )
+  } else if (type === "vue3") {
+    const templatePath = path.resolve(__dirname, "../package/templates/vue3-runtime")
     copyDirSync(
       templatePath,
       resolveApp(name)

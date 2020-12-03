@@ -1,7 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 
-import history from "@common/history"
+import { history } from "@common/history"
 import { PATH_TEST } from "@constants/path"
 import { Container } from "@styles/index"
 

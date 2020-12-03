@@ -21,7 +21,7 @@ program
   .command("create-app <type> <name>")
   .description("create a mirco app")
   .action((type, name) => {
-    if (type === "react" || type === "vue") {
+    if (type === "react" || type === "vue2" || type === "vue3") {
       create(type, name)
     }
   })

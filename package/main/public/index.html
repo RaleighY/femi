@@ -5,26 +5,28 @@
     <title>Femi</title>
     <link rel="shortcut icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="https://cdn.jsdelivr.net/npm/zepto@1.2.0/dist/zepto.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
     <script type="systemjs-importmap">
       {
         "imports": {
-          "vue": "https://cdn.jsdelivr.net/npm/vue",
+          "vue2": "https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js",
           "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.4.8/dist/vue-router.min.js",
+          "vue": "https://cdn.jsdelivr.net/npm/vue@3.0.3/index.js",
           "react": "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js",
           "react-dom": "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js",
-          "vueApp2": "/vueApp.js",
-          "reactApp2": "/reactApp2.js",
-          "vueApp": "http://localhost:3002/Parcel/js/main.js",
-          "reactApp": "http://localhost:3001/Parcel/js/main.js"
+          "reactApp": "http://localhost:3001/parcel/js/main.js",
+          "vue2App": "http://localhost:3002/parcel/js/main.js",
+          "vue3App": "http://localhost:3003/parcel/js/main.js"
         }
       }
     </script>
   </head>
   <body>
-    <div id="app-react"></div>
-    <div id="app-vue"></div>
-    <div id="app-parcel-react"></div>
+    <div id="app-buildin-react"></div>
+    <div id="app-buildin-vueV2"></div>
+    <div id="app-runtime-react"></div>
+    <div id="app-runtime-vueV3"></div>
   </body>
 </html>

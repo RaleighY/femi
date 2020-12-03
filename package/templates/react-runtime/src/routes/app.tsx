@@ -1,14 +1,31 @@
 import React from "react"
 import { Router, Route } from "react-router"
+import { createBrowserHistory, History } from "history"
 
-import history from "@common/history"
 import { PATH_INDEX, PATH_TEST } from "@constants/path"
 import Index from "@routes/Index"
 import Test from "@routes/Test"
 import GlobalStyle, { ContainerDev } from "@styles/index"
 
-// Parcel: 由外部容器决定此 App 的容器大小
-export const App = () => {
+export let history: History<any>
+
+export interface IAppProps {
+  rootPath?: string
+}
+export const App = (props: IAppProps) => {
+  const { rootPath } = props
+
+  if (rootPath) {
+    // 以微前端形式接入时，要补上主工程当前的路由前缀
+    history = createBrowserHistory({
+      basename: props.rootPath,
+    })
+  } else {
+    history = createBrowserHistory({
+      basename: "",
+    })
+  }
+
   return (
     <>
       <GlobalStyle />
@@ -20,7 +37,9 @@ export const App = () => {
   )
 }
 
-// 独立: 全屏启动
+// App 根组件是没有固定宽高的
+// 在以微前端形式接入主工程时由外部容器决定此 App 的容器大小
+// 而在独立开发、独立部署时，默认套上全屏的壳
 export const AppDev = () => {
   return (
     <ContainerDev>

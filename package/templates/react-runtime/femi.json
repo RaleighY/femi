@@ -1,7 +1,18 @@
 {
   "entry": {
-    "Main": "./src/dev.tsx",
-    "Parcel": "./src/parcel.tsx"
+    "default": "./src/dev.tsx",
+    "parcel": "./src/parcel.tsx"
   },
-  "port": 3001
+  "port": 3001,
+  "alias": {
+    "@src/*": "src/*",
+    "@api/*": "src/api/*",
+    "@common/*": "src/common/*",
+    "@constants/*": "src/constants/*",
+    "@components/*": "src/components/*",
+    "@routes/*": "src/routes/*",
+    "@stores/*": "src/stores/*",
+    "@styles/*": "src/styles/*",
+    "@type/*": "src/type/*"
+  }
 }

@@ -14,12 +14,20 @@ const updateArr = [
     to: template("react-runtime/gitignore"),
   },
   {
-    from: template("vue-runtime/yarn.lock"),
-    to: template("vue-runtime/yarnlock"),
+    from: template("vue2-runtime/yarn.lock"),
+    to: template("vue2-runtime/yarnlock"),
   },
   {
-    from: template("vue-runtime/.gitignore"),
-    to: template("vue-runtime/gitignore"),
+    from: template("vue2-runtime/.gitignore"),
+    to: template("vue2-runtime/gitignore"),
+  },
+  {
+    from: template("vue3-runtime/yarn.lock"),
+    to: template("vue3-runtime/yarnlock"),
+  },
+  {
+    from: template("vue3-runtime/.gitignore"),
+    to: template("vue3-runtime/gitignore"),
   },
   {
     from: main(".gitignore"),

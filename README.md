@@ -62,7 +62,7 @@ yarn start
   |--- public   // 存放静态资源，此目录下的文件构建时仅复制
   |--- src
     |--- apps               // App目录
-      |--- appParcelReact   // Runtime Demo App
+      |--- appRuntimeReact   // Runtime Demo App
       |--- appVue           // Buildin Demo App
       |--- appReact         // Buildin Demo App
     |--- common             // 公共库，所有 Buildin app 可以直接引入
@@ -155,8 +155,8 @@ src/app.js
 export default [
   ...
   {
-    name: "appParcelReact",       // 名字, 随意取
-    key: "appParcelReact",        // key，需要和目录名
+    name: "appRuntimeReact",       // 名字, 随意取
+    key: "appRuntimeReact",        // key，需要和目录名
     path: APP_PARCEL_REACT,       // 路由匹配前缀，匹配到就会分配到此 App
     domId: "app-parcel-react",    // 此 App 挂载的 dom 节点
   },
@@ -216,7 +216,7 @@ public/index.html
 ...
 ```
 
-apps/appParcelReact 新建
+apps/appRuntimeReact 新建
 
 ```js
 import { bootstrapFac, mountFac, unmountFac } from "@common/appFac"
@@ -305,6 +305,16 @@ export { bootstrap, mount, unmount }
       "changeOrigin": true
     }
   },
+  ...
+}
+```
+
+### externals - 构建排除项
+
+```json
+{
+  ...,
+  "externals": ["vue", "vue-router"]
   ...
 }
 ```

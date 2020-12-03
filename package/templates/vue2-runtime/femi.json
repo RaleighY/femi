@@ -1,0 +1,7 @@
+{
+  "entry": {
+    "default": "./src/index.js",
+    "parcel": "./src/parcel.js"
+  },
+  "port": 3002
+}

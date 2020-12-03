@@ -23,14 +23,13 @@
     "paths": {
       "@src/*": ["src/*"],
       "@apps/*": ["src/apps/*"],
-      "@parcels/*": ["src/parcels/*"],
       "@common/*": ["src/common/*"],
       "@constants/*": ["src/constants/*"],
       "@components/*": ["src/components/*"],
       "@styles/*": ["src/styles/*"],
       "@type/*": ["src/type/*"],
-      "@appReact/*": ["src/apps/appReact/*"],
-      "@appVue/*": ["src/apps/appVue/*"]
+      "@app-buildin-react/*": ["src/apps/app-buildin-react/*"],
+      "@app-buildin-vueV2/*": ["src/apps/app-buildin-vueV2/*"]
     }
   }
 }

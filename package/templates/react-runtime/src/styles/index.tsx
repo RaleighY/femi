@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Normalize } from "./NormalizeCss"
+// import { Normalize } from "./NormalizeCss"
 import { MyGlobalStyles } from "./MyGlobalStyles"
 
 export default () => {
   return (
     <>
-      <Normalize />
+      {/* <Normalize /> */}
       <MyGlobalStyles />
     </>
   )
