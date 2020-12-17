@@ -1,10 +1,13 @@
 import Vue from "vue"
-import App from "./App.vue"
-import router from "./router"
 import singleSpaVue from "single-spa-vue"
 
+import App from "./routes/Home/index.vue"
+import router from "./router"
+import "./set-public-path"
+
 const vueLifecycles = singleSpaVue({
-  Vue,
+  // Vue: Vue.default,
+  Vue: Vue,
   appOptions: {
     render(h) {
       return h(App)
@@ -22,7 +25,7 @@ if (!process.env.isSystem) {
 
   /* eslint-disable no-new */
   new Vue({
-    el: "#app-buildin-vueV2",
+    el: "#app-runtime-vueV2",
     render: h => h(App),
   })
 }

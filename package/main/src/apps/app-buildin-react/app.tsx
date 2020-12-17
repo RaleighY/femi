@@ -17,3 +17,5 @@ export const mount = mountFac(props => {
 export const unmount = unmountFac(props => {
   ReactDOM.unmountComponentAtNode(document.getElementById(props.domId)!)
 })
+
+!process.env.isSystem && ReactDOM.render(<Index />, document.getElementById("app-buildin-react"))

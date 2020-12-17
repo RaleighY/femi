@@ -1,6 +1,6 @@
 {
-  "name": "test-react",
-  "version": "1.0.0",
+  "name": "vue2-runtime",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "start": "femi-scripts start",

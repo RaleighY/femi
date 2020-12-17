@@ -2,6 +2,7 @@ import { h, createApp } from "vue"
 import singleSpaVue from "single-spa-vue"
 
 import App from "./routes/App.vue"
+import AppDev from "./routes/index.vue"
 import router from "./router"
 import "./set-public-path"
 
@@ -24,3 +25,9 @@ const vueLifecycles = singleSpaVue({
 export const bootstrap = vueLifecycles.bootstrap
 export const mount = vueLifecycles.mount
 export const unmount = vueLifecycles.unmount
+
+if (!process.env.isSystem) {
+  createApp(AppDev)
+    .use(router)
+    .mount("#app-runtime-vueV3")
+}

@@ -1,0 +1,29 @@
+{
+  "name": "pure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "femi-scripts start",
+    "build": "femi-scripts build"
+  },
+
+  "dependencies": {
+    "femi-scripts": "^0.2.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,scss,md,ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "yarn eslint"
+    ]
+  }
+}

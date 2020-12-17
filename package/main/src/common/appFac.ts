@@ -10,7 +10,6 @@ export function bootstrapFac(fn?: (appProps: any) => void) {
     Promise.resolve().then(() => {
       fn && fn(props)
       // One-time initialization code goes here
-      console.log("bootstrapped!")
     })
 }
 

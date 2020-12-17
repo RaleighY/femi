@@ -1,6 +1,5 @@
 import { registerApplication, start } from "single-spa"
 import apps from "./app"
-import "normalize.css"
 
 const pathPrefix = (prefix, exact) => location =>
   exact ? location.pathname === prefix : location.pathname.startsWith(prefix)

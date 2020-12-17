@@ -1,6 +1,7 @@
 import {
   APP_RUNTIME_REACT,
-  APP_RUNTIME_VUE,
+  APP_RUNTIME_VUE2,
+  APP_RUNTIME_VUE3,
   APP_BUILDIN_REACT,
   APP_BUILDIN_VUE,
 } from "@constants/appPath"
@@ -25,9 +26,15 @@ export default [
     domId: "app-runtime-react",
   },
   {
-    name: "appRuntimeVue",
+    name: "appRuntimeVueV2",
+    key: "app-runtime-vueV2",
+    path: APP_RUNTIME_VUE2,
+    domId: "app-runtime-vueV2",
+  },
+  {
+    name: "appRuntimeVueV3",
     key: "app-runtime-vueV3",
-    path: APP_RUNTIME_VUE,
+    path: APP_RUNTIME_VUE3,
     domId: "app-runtime-vueV3",
   },
 ]

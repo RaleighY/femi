@@ -11,19 +11,21 @@ program.version(packageJson.version)
 // init the project
 program
   .command("init <projectName>")
-  .description("create a mirco project")
-  .action((projectName) => {
-    init(projectName)
+  .description("create a mirco frontend main project")
+  .option("-b, --buildin", "buildin")
+  .action((projectName, command) => {
+    const { buildin: isBuildin } = command
+    init(projectName, { isBuildin })
   })
 
 // create an mirco app
 program
-  .command("create-app <type> <name>")
-  .description("create a mirco app")
-  .action((type, name) => {
-    if (type === "react" || type === "vue2" || type === "vue3") {
-      create(type, name)
-    }
+  .command("create-app <appType> <appName>")
+  .description("create a mirco frontend sub app")
+  .option("-b, --buildin", "buildin")
+  .action((appType, appName, command) => {
+    const { buildin: isBuildin } = command
+    create(appType, appName, { isBuildin })
   })
 
 program.parse(process.argv)

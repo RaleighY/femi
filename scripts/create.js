@@ -1,57 +1,53 @@
 const fs = require("fs")
 const path = require("path")
-const shell = require("shelljs")
 const copyDirSync = require("../lib/copy").copyDirSync
 const updateIgnored = require("../lib/updateIgnored")
+const updatePackageJSON = require("../lib/updatePackageJSON")
 
-module.exports = function create(type, name) {
+module.exports = function create(appType, appName, options) {
   const appDirectory = fs.realpathSync(process.cwd())
   const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath)
-  const targetPath = resolveApp(`src/apps/${name}`)
+  const targetPath = resolveApp(`src/apps/${appName}`)
   const tsconfigPath = resolveApp("tsconfig.json")
   const ownPath = resolveApp("templates/react")
+  const { isBuildin } = options
 
-  if (type === "react") {
-    const templatePath = path.resolve(__dirname, "../package/templates/react-runtime")
+  const templates = {
+    react: "../package/templates/react-runtime",
+    vue2: "../package/templates/vue2-runtime",
+    vue3: "../package/templates/vue3-runtime",
+    "react-buildin": "../package/templates/react-buildin",
+  }
+
+  const appTypeReal = appType + (isBuildin ? `-buildin` : "")
+
+  if (templates[appTypeReal]) {
+    if (isBuildin) {
+      copySync(templates[appTypeReal], resolveApp(`src/apps/${appName}`))
+    } else {
+      copySync(templates[appTypeReal], resolveApp(appName))
+      updatePackageJSON(resolveApp(appName), appName)
+      updateIgnored(appName)
+    }
+  } else {
+    console.log(`No match to the ${appType} app type, check it please!`)
+    return
+  }
+
+  function copySync(templatePath, targetPath) {
     copyDirSync(
-      templatePath,
-      resolveApp(name)
-      // (statsname, from) => {
-      //   if (from.match("node_modules")) {
-      //     return false
-      //   } else {
-      //     return true
-      //   }
-      // }
-    )
-  } else if (type === "vue2") {
-    const templatePath = path.resolve(__dirname, "../package/templates/vue2-runtime")
-    copyDirSync(
-      templatePath,
-      resolveApp(name)
-      // (statsname, from) => {
-      //   if (from.match("node_modules")) {
-      //     return false
-      //   } else {
-      //     return true
-      //   }
-      // }
-    )
-  } else if (type === "vue3") {
-    const templatePath = path.resolve(__dirname, "../package/templates/vue3-runtime")
-    copyDirSync(
-      templatePath,
-      resolveApp(name)
-      // (statsname, from) => {
-      //   if (from.match("node_modules")) {
-      //     return false
-      //   } else {
-      //     return true
-      //   }
-      // }
+      path.resolve(__dirname, templatePath),
+      targetPath,
+      // 本地调试请打开注释
+      (statsname, from) => {
+        if (from.match("node_modules")) {
+          return false
+        } else {
+          return true
+        }
+      }
     )
   }
-  updateIgnored(name)
 
   // new Promise((resolve, reject) => {
   //   fs.stat(ownPath, (err, stats) => {
@@ -82,14 +78,4 @@ module.exports = function create(type, name) {
   //     updateTsconfig(tsconfigPath, name)
   //   }
   // )
-}
-
-function updateTsconfig(path, name) {
-  const tsconfigJSON = require(path)
-  if (tsconfigJSON) {
-    // "@type/*": ["src/type/*"]
-    tsconfigJSON.compilerOptions.paths[`@${name}/*`] = [`src/${name}/*`]
-    fs.writeFileSync(path, JSON.stringify(tsconfigJSON))
-    shell.exec(`prettier --write ${path}`)
-  }
 }

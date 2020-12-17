@@ -3,9 +3,9 @@ import { Router, Route } from "react-router"
 import { createBrowserHistory, History } from "history"
 
 import { PATH_INDEX, PATH_TEST } from "@constants/path"
-import Index from "@routes/Index"
+import Index from "@routes/Home"
 import Test from "@routes/Test"
-import GlobalStyle, { ContainerDev } from "@styles/index"
+import { ContainerDev } from "@styles/index"
 
 export let history: History<any>
 
@@ -28,7 +28,6 @@ export const App = (props: IAppProps) => {
 
   return (
     <>
-      <GlobalStyle />
       <Router history={history}>
         <Route path={PATH_INDEX} component={Index} exact></Route>
         <Route path={PATH_TEST} component={Test}></Route>

@@ -155,8 +155,8 @@ src/app.js
 export default [
   ...
   {
-    name: "appRuntimeReact",       // 名字, 随意取
-    key: "appRuntimeReact",        // key，需要和目录名
+    name: "appRuntimeReact",      // 名字, 随意取
+    key: "appRuntimeReact",       // key，需要和目录名
     path: APP_PARCEL_REACT,       // 路由匹配前缀，匹配到就会分配到此 App
     domId: "app-parcel-react",    // 此 App 挂载的 dom 节点
   },
@@ -277,13 +277,11 @@ export { bootstrap, mount, unmount }
 }
 ```
 
-### useTs - 是否使用 ts
+### alias - 引入路径的别名
 
-```json
-{
-  "useTs: false             // 非必填，默认为 true
-  ...
-}
+```js
+import { history } from "@common/history"
+// => import { history } from "./src/common/history"
 ```
 
 ### port - 开发环境端口

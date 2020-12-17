@@ -1,6 +1,6 @@
 {
   "name": "femi",
-  "version": "0.1.11",
+  "version": "0.1.13",
   "author": "raleighy <raleighy@163.com>",
   "bin": {
     "femi": "./bin/femi.js"
@@ -12,6 +12,6 @@
   "dependencies": {
     "commander": "^4.1.0",
     "fs-extra": "^9.0.1",
-    "shelljs": "^0.8.3"
+    "json-format": "^1.0.1"
   }
 }

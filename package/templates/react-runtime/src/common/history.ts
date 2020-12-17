@@ -1,1 +1,1 @@
-export { history } from "@src/routes/app"
+export { history } from "@src/routes/index"

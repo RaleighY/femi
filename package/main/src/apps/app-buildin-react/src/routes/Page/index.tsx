@@ -5,7 +5,8 @@ import {
   APP_BUILDIN_VUE,
   APP_BUILDIN_REACT,
   APP_RUNTIME_REACT,
-  APP_RUNTIME_VUE,
+  APP_RUNTIME_VUE2,
+  APP_RUNTIME_VUE3,
 } from "@constants/appPath"
 import { parcelFac } from "@common/parcelFac"
 
@@ -26,6 +27,12 @@ export default function(props: { mountParcel: any }) {
   const [vueRootParcel, setVueRootParcel] = useState<Parcel | null>(null)
   const [reactRootParcel, setReactRootParcel] = useState<Parcel | null>(null)
 
+  const unload = (parcel: Parcel | null) => {
+    if (parcel && parcel.getStatus() === "MOUNTED") {
+      parcel.unmount()
+    }
+  }
+
   const handleGoToAppBuildinVueV2 = () => {
     navigateToUrl(APP_BUILDIN_VUE)
   }
@@ -34,8 +41,12 @@ export default function(props: { mountParcel: any }) {
     navigateToUrl(APP_BUILDIN_REACT)
   }
 
+  const handleGoToAppRuntimeVueV2 = () => {
+    navigateToUrl(APP_RUNTIME_VUE2)
+  }
+
   const handleGoToAppRuntimeVueV3 = () => {
-    navigateToUrl(APP_RUNTIME_VUE)
+    navigateToUrl(APP_RUNTIME_VUE3)
   }
 
   const handleGoToAppRuntimeReact = () => {
@@ -71,7 +82,10 @@ export default function(props: { mountParcel: any }) {
     try {
       const parcel = parcelFac({ appName: "reactApp", domId: "item3" })
       unload(reactParcel)
-      const parcelInstance = mountParcel(parcel.config, parcel.props)
+      const parcelInstance = mountParcel(
+        parcel.config,
+        Object.assign(parcel.props, { path: location.pathname })
+      )
       setReactParcel(parcelInstance)
     } catch (err) {
       console.log(err)
@@ -89,15 +103,9 @@ export default function(props: { mountParcel: any }) {
     }
   }
 
-  const unload = (parcel: Parcel | null) => {
-    if (parcel && parcel.getStatus() === "MOUNTED") {
-      parcel.unmount()
-    }
-  }
-
   useEffect(() => {
-    handleLoadVueRootParcel()
-    handleLoadReactRootParcel()
+    // handleLoadVueRootParcel()
+    // handleLoadReactRootParcel()
   }, [])
 
   return (
@@ -105,6 +113,7 @@ export default function(props: { mountParcel: any }) {
       <ButtonContainer>
         <Button onClick={handleGoToAppBuildinVueV2}>Go to Vue V2 App (buildin)</Button>
         <Button onClick={handleGoToAppBuildinReact}>Go to React App (buildin)</Button>
+        <Button onClick={handleGoToAppRuntimeVueV2}>Go to Vue V2 App (runtime)</Button>
         <Button onClick={handleGoToAppRuntimeVueV3}>Go to Vue V3 App (runtime)</Button>
         <Button onClick={handleGoToAppRuntimeReact}>Go to React App (runtime)</Button>
       </ButtonContainer>

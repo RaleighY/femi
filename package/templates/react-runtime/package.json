@@ -1,6 +1,6 @@
 {
-  "name": "test-react",
-  "version": "1.0.0",
+  "name": "react-runtime",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "start": "femi-scripts start",
@@ -10,5 +10,7 @@
     "femi-scripts": "^0.2.9",
     "react-helmet": "^6.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/react-helmet": "^6.1.0"
+  }
 }

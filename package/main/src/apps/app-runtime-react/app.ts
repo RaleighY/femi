@@ -1,6 +1,10 @@
 import { bootstrapFac, mountFac, unmountFac } from "@common/appFac"
 
-const bootstrap = bootstrapFac(() => {})
+const bootstrap = bootstrapFac(props => {
+  System.import("reactApp").then((res: any) => {
+    res.bootstrap(props)
+  })
+})
 
 const mount = mountFac(props => {
   System.import("reactApp").then((res: any) => {

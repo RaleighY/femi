@@ -1,7 +1,5 @@
 import { bootstrapFac, mountFac, unmountFac } from "@common/appFac"
 
-const bootstrap = bootstrapFac(() => {})
-
 export function parcelFac(options: { appName: string; domId: string; props?: {} }) {
   const { appName, domId, props } = options
   const dom = document.getElementById(domId)
@@ -10,7 +8,11 @@ export function parcelFac(options: { appName: string; domId: string; props?: {} 
   }
   return {
     config: {
-      bootstrap,
+      bootstrap: bootstrapFac(props => {
+        System.import(appName).then((res: any) => {
+          res.bootstrap(props)
+        })
+      }),
       mount: mountFac(props => {
         System.import(appName).then((res: any) => {
           res.mount(props)
