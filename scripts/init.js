@@ -12,28 +12,28 @@ module.exports = function init(projectName, options) {
   if (isBuildin) {
     copyDirSync(
       path.resolve(__dirname, "../package/main"),
-      resolveApp(""),
+      resolveApp("")
       // 本地调试请打开注释
-      (statsname, from) => {
-        if (from.match("node_modules")) {
-          return false
-        } else {
-          return true
-        }
-      }
+      // (statsname, from) => {
+      //   if (from.match("node_modules")) {
+      //     return false
+      //   } else {
+      //     return true
+      //   }
+      // }
     )
   } else {
     copyDirSync(
       path.resolve(__dirname, "../package/pure"),
-      resolveApp(""),
+      resolveApp("")
       // 本地调试请打开注释
-      (statsname, from) => {
-        if (from.match("node_modules")) {
-          return false
-        } else {
-          return true
-        }
-      }
+      // (statsname, from) => {
+      //   if (from.match("node_modules")) {
+      //     return false
+      //   } else {
+      //     return true
+      //   }
+      // }
     )
   }
   updatePackageJSON(resolveApp(""), projectName)
