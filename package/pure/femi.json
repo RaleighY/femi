@@ -1,3 +1,15 @@
 {
-  "entry": "./src/single-spa.config.js"
+  "entry": "./src/main.js",
+  "alias": {
+    "@src/*": "src/*",
+    "@api/*": "src/api/*",
+    "@common/*": "src/common/*",
+    "@constants/*": "src/constants/*",
+    "@components/*": "src/components/*",
+    "@routes/*": "src/routes/*",
+    "@stores/*": "src/stores/*",
+    "@styles/*": "src/styles/*",
+    "@type/*": "src/type/*"
+  },
+  "port": 3000
 }

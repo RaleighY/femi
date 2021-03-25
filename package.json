@@ -2,6 +2,11 @@
   "name": "femi",
   "version": "0.1.14",
   "author": "raleighy <raleighy@163.com>",
+  "keywords": [
+    "micro frontend",
+    "microfrontend",
+    "micro-frontend"
+  ],
   "bin": {
     "femi": "./bin/femi.js"
   },

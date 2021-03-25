@@ -6999,11 +6999,6 @@ single-spa@^5.5.5:
   resolved "https://registry.npm.taobao.org/single-spa/download/single-spa-5.8.1.tgz?cache=0&sync_timestamp=1604592887400&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsingle-spa%2Fdownload%2Fsingle-spa-5.8.1.tgz#86c2575e297e31d8f06945944ec97e31851a59ae"
   integrity sha1-hsJXXil+MdjwaUWUTsl+MYUaWa4=
 
-single-spa@^5.8.2:
-  version "5.8.2"
-  resolved "https://registry.npm.taobao.org/single-spa/download/single-spa-5.8.2.tgz#e5b816612d61e6750dec79d42bc992c6f8c0db34"
-  integrity sha1-5bgWYS1h5nUN7HnUK8mSxvjA2zQ=
-
 slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/slash/download/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"

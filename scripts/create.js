@@ -37,15 +37,15 @@ module.exports = function create(appType, appName, options) {
   function copySync(templatePath, targetPath) {
     copyDirSync(
       path.resolve(__dirname, templatePath),
-      targetPath,
+      targetPath
       // 本地调试请打开注释
-      (statsname, from) => {
-        if (from.match("node_modules")) {
-          return false
-        } else {
-          return true
-        }
-      }
+      // (statsname, from) => {
+      //   if (from.match("node_modules")) {
+      //     return false
+      //   } else {
+      //     return true
+      //   }
+      // }
     )
   }
 

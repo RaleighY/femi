@@ -1,0 +1,19 @@
+{
+  "entry": "./src/app.tsx",
+  "port": 3099,
+  "alias": {
+    "@src/*": "src/*",
+    "@api/*": "src/api/*",
+    "@common/*": "src/common/*",
+    "@constants/*": "src/constants/*",
+    "@components/*": "src/components/*",
+    "@routes/*": "src/routes/*",
+    "@stores/*": "src/stores/*",
+    "@styles/*": "src/styles/*",
+    "@type/*": "src/type/*"
+  },
+  "externals": [
+    "react",
+    "react-dom"
+  ]
+}

@@ -1,5 +1,6 @@
 import { registerApplication, start } from "single-spa"
 import apps from "./app"
+import "./main.less"
 
 const pathPrefix = (prefix, exact) => location =>
   exact ? location.pathname === prefix : location.pathname.startsWith(prefix)

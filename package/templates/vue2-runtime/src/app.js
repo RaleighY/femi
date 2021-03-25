@@ -4,6 +4,7 @@ import singleSpaVue from "single-spa-vue"
 import App from "./routes/Home/index.vue"
 import router from "./router"
 import "./set-public-path"
+import "normalize.css"
 
 const vueLifecycles = singleSpaVue({
   // Vue: Vue.default,

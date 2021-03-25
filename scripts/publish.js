@@ -3,6 +3,7 @@ const path = require("path")
 
 const template = (str) => path.resolve("package/templates", str)
 const main = (str) => path.resolve("package/main", str)
+const pure = (str) => path.resolve("package/pure", str)
 
 const updateArr = [
   {
@@ -36,6 +37,14 @@ const updateArr = [
   {
     from: main("yarn.lock"),
     to: main("yarnlock"),
+  },
+  {
+    from: pure(".gitignore"),
+    to: pure("gitignore"),
+  },
+  {
+    from: pure("yarn.lock"),
+    to: pure("yarnlock"),
   },
 ]
 

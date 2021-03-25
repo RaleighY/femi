@@ -1,13 +1,11 @@
 {
   "name": "pure",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "femi-scripts start",
     "build": "femi-scripts build"
   },
-
   "dependencies": {
     "femi-scripts": "^0.2.11"
   },

@@ -7,7 +7,7 @@
     "build": "femi-scripts build"
   },
   "dependencies": {
-    "femi-scripts": "^0.2.9",
+    "femi-scripts": "^0.2.11",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {

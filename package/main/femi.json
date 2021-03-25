@@ -1,6 +1,6 @@
 {
   "entry": {
-    "default": "src/single-spa.config.js",
+    "default": "src/main.js",
     "buildin-react": "src/apps/app-buildin-react/app.tsx",
     "buildin-vueV2": "src/apps/app-buildin-vueV2/app.js"
   },

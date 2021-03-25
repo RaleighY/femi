@@ -6,6 +6,7 @@ import { PATH_INDEX, PATH_TEST } from "@constants/path"
 import Index from "@routes/Home"
 import Test from "@routes/Test"
 import { ContainerDev } from "@styles/index"
+import "normalize.css"
 
 export let history: History<any>
 

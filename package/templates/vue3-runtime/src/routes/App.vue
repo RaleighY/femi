@@ -1,18 +1,25 @@
 <template>
-  <div>This is Home</div>
-  <!-- <router-view>
-    <p>In Vue Router 3, I render inside the route component</p>
-  </router-view> -->
+  <div class="app">
+    <a @click="handleGotoAppReact">Go to App React</a>
+    <router-view />
+  </div>
 </template>
 
 <script>
-import { RouterView } from "vue-router"
+import { RouterView, RouterLink } from "vue-router"
+import { navigateToUrl } from "single-spa"
 
 export default {
   props: ["appName", "mountParcel", "singleSpa"],
   name: "App",
   components: {
     RouterView,
+    RouterLink,
+  },
+  methods: {
+    handleGotoAppReact() {
+      navigateToUrl("/react")
+    },
   },
   mounted() {
     console.log("appName:", this.appName)
@@ -25,4 +32,14 @@ export default {
 </script>
 
 <style>
+.single-spa-container {
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  background-color: #96999c;
+}
 </style>

@@ -35,7 +35,6 @@
     "femi-scripts": "^0.2.11",
     "react-async": "^8.0.0",
     "react-async-devtools": "^8.0.0",
-    "single-spa": "^5.8.2",
     "single-spa-react": "^3.0.1",
     "single-spa-vue": "^1.10.0",
     "vue": "^2.6.12",

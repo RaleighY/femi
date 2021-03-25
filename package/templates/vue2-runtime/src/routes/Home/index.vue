@@ -1,17 +1,15 @@
 <template>
-  <div id="app">
-    This is a vue app
-  </div>
+  <div class="app">This is a vue2 app</div>
 </template>
 
 <script>
 export default {
   name: "App",
-};
+}
 </script>
 
-<style>
-#app {
+<style scoped>
+.app {
   width: 100%;
   height: 100%;
   display: flex;

@@ -1,5 +1,6 @@
 import React from "react"
 import Helmet from "react-helmet"
+import { navigateToUrl } from "single-spa"
 
 import { history } from "@common/history"
 import { PATH_TEST } from "@constants/path"
@@ -10,6 +11,10 @@ const Index = () => {
     history.push(PATH_TEST)
   }
 
+  const handleGoToAppVue3 = () => {
+    navigateToUrl("/vue3")
+  }
+
   return (
     <Container>
       <Helmet>
@@ -17,6 +22,7 @@ const Index = () => {
       </Helmet>
       This is a react app
       <button onClick={handleGoToTestPage}>Go to test page</button>
+      <button onClick={handleGoToAppVue3}>Go to App vue3</button>
     </Container>
   )
 }
